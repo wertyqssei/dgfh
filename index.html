@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sport News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #222; }
+    header {
+      background: #fff;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-img {
+      width: 60px;
+      height: auto;
+    }
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #222;
+    }
+    nav { display: flex; gap: 15px; align-items: center; }
+    nav a {
+      font-size: 14px;
+      color: #444;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .search-box {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .hero {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+    .hero-text { flex: 1; }
+    .hero-text h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      border: 1px solid #444;
+      background: transparent;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      background: #444;
+      color: #fff;
+    }
+    .hero-img img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+    .category {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .category:hover { transform: translateY(-5px); }
+    .category img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .category h3 {
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    .news-section {
+      display: grid;
+      gap: 20px;
+    }
+    .news-card {
+      display: flex;
+      gap: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      align-items: center;
+    }
+    .news-card img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .news-card p {
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .news-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .news-card img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKIz-hWeeys6szahTAi7N_bke-A6WAVXF2YQ&s" alt="Logo" class="logo-img">
+      <span class="logo-text">Sport News</span>
+    </div>
+    
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Category</a>
+      <a href="#">Trending</a>
+      <a href="#">Latest</a>
+      <a href="#">Ranking</a>
+      <a href="#">Articles</a>
+      <input class="search-box" type="search" placeholder="Search"/>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Top Scorer to the Final Match</h1>
+        <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals.</p>
+        <button class="btn">Continue Reading</button>
+      </div>
+      <div
+class="hero-img">
+        <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Basketball Player">
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="category">
+        <img src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=300" alt="Football">
+        <h3>Football</h3>
+      </div>
+      <div class="category">
+        <img src="https://www.fisu.net/app/uploads/2023/09/table_tennis.jpg" alt="Table Tennis">
+        <h3>Table Tennis</h3>
+      </div>
+      <div class="category">
+        <img src="https://img.zerkalo.io/720x720s/reuters/10/5/02_dzhei_ms_lebron_28012023.jpg" alt="Basketball">
+        <h3>Basketball</h3>
+      </div>
+      <div class="category">
+        <img src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=300" alt="Runner">
+        <h3>Running</h3>
+      </div>
+    </section>
+
+    <section class="news-section">
+      <div class="news-card">
+        <img src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="Runner">
+        <p><strong>Race – 03 June 2023:</strong> Ethiopian runners took the top four spots.</p>
+      </div>
+      <div class="news-card">
+        <img src="https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="IndyCar">
+        <p><strong>IndyCar – 03 June 2023:</strong> Dixon quickest in second practice.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
